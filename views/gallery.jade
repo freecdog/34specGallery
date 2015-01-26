@@ -1,0 +1,41 @@
+//
+   Created by jaric on 20.01.2015.
+
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+        link(rel='stylesheet', href='/stylesheets/bootstrap-theme.css')
+        //-link(rel='stylesheet', href='/stylesheets/dashboard.css')
+
+        title= "gallery"
+        //-link(rel='stylesheet', href='/stylesheets/style.css')
+        //-meta(name="viewport", content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes")
+
+        script(src='/javascripts/angular.js')
+        script(src='/javascripts/ui-bootstrap-tpls-0.12.0.js')
+        script(src='/javascripts/gallery.js')
+
+    body
+        div(ng-app='jApp', ng-controller='jController')
+            input(type='text', ng-model='id', class='form-control', placeholder='your id')
+            button(class='btn btn-danger center-block') search
+            //-div() {{id}}
+            //-div(ng-repeat='photo in data')
+                div()
+                    img(ng-src='{{photo.link}}', class='img-rounded center-block')
+
+            div(class='col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main')
+                div(class='row', ng-repeat='rows in chunkedData')
+                    div(class='col-xs-4 col-sm-3', ng-repeat='item in rows')
+                        img(ng-src='{{item.link}}', class='img-responsive', data-holder-rendered='true')
+
+            table(class='table-striped')
+                tr(ng-repeat='rows in chunkedData')
+                    td(ng-repeat='item in rows')
+                        img(ng-src='{{item.link}}', class='img-rounded center-block')
+
+

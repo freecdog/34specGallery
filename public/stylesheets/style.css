@@ -1,8 +1,18 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    color: #bf8a49;
+    background-color: #0d0d0d;
 }
 
 a {
-  color: #00B7FF;
+    color: #f2ca80;
+}
+
+#colorsHolder {
+    color: #73603D;
+    color: #bf8a49;
+    color: #f2ca80;
+    color: #5e5a59;
+    color: #0d0d0d;
 }
