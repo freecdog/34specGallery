@@ -19,31 +19,35 @@
             else $scope.nameChanged = true;
         },false);
 
+        function chunk(arr, size) {
+            var newArr = [];
+            for (var i=0; i<arr.length; i+=size) newArr.push(arr.slice(i, i+size));
+            return newArr;
+        }
         function getData() {
             $http.get('/data').success(function(data, status, headers, config) {
                 $scope.data = data;
+                $scope.dataSaved = data;
+
                 console.log(data);
 
-                function chunk(arr, size) {
-                    var newArr = [];
-                    for (var i=0; i<arr.length; i+=size) newArr.push(arr.slice(i, i+size));
-                    return newArr;
-                }
                 $scope.chunkedData = chunk(data, 3);
-
             });
         }
         getData();
 
-        $scope.myInterval = 5000;
-        var slides = $scope.slides = [];
-        $scope.addSlide = function() {
-            var newWidth = 600 + slides.length + 1;
-            slides.push({
-                image: 'http://placekitten.com/' + newWidth + '/300',
-                text: ['More','Extra','Lots of','Surplus'][slides.length % 4] + ' ' +
-                    ['Cats', 'Kittys', 'Felines', 'Cutes'][slides.length % 4]
-            });
+        $scope.onlyNumbers = /^\d+$/;
+        $scope.getPhotos = function(id) {
+            console.log(id);
+            if (id !== undefined){
+                $scope.inputId = parseInt(id);
+                $http.get('/photos/' + id).success(function(data, status, headers, config) {
+                    $scope.data = data;
+                    console.log(data);
+
+                    $scope.chunkedData = chunk(data, 3);
+                });
+            }
         };
 
     }]);

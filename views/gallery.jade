@@ -22,11 +22,16 @@ html(lang='en')
 
     body
         div(ng-app='jApp', ng-controller='jController')
+
+            //-div(class='col-xs-4', ng-repeat='obj in dataSaved', ng-click='getPhotos(obj.userId)') {{obj.userId}}
+            div(class='col-xs-4', ng-repeat='obj in dataSaved', ng-click='getPhotos(obj.userId)')
+                p {{obj.userId}}
+
             div(class='main row center-block form-control-static')
                 div(class='col-xs-9')
-                    input(type='text', ng-model='id', class='form-control center-block', placeholder='your id')
+                    input(type='number', ng-model='inputId', class='form-control center-block', placeholder='your id', ng-patter='onlyNumbers')
                 div(class='col-xs-3')
-                    a(href='/gallery', class='btn btn-danger center-block', onclick='alert(321);') Search
+                    a(class='btn btn-danger center-block', ng-click='getPhotos(inputId)') Search
 
             //-
                 input(type='text', ng-model='id', class='form-control', placeholder='your id')
