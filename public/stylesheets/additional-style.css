@@ -1,0 +1,13 @@
+.btn-outline-inverse {
+    color:#fff;
+    background-color:transparent;
+    border-color:#cdbfe3
+}
+.btn-outline-inverse:active,
+.btn-outline-inverse:focus,
+.btn-outline-inverse:hover {
+    color:#563d7c;
+    text-shadow:none;
+    background-color:#fff;
+    border-color:#fff
+}
