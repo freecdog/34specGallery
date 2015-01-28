@@ -7,8 +7,8 @@ html(lang='en')
         meta(charset='utf-8')
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
         //-meta(name="viewport", content="width=device-width, initial-scale=1")
-        link(rel='stylesheet', href='/stylesheets/bootstrap.css')
-        link(rel='stylesheet', href='/stylesheets/bootstrap-theme.css')
+        link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
+        link(rel='stylesheet', href='/bootstrap/css/bootstrap-theme.css')
         link(rel='stylesheet', href='/stylesheets/additional-style.css')
         //-link(rel='stylesheet', href='/stylesheets/dashboard.css')
 
@@ -31,7 +31,7 @@ html(lang='en')
                 div(class='col-xs-9')
                     input(type='number', ng-model='inputId', class='form-control center-block', placeholder='your id', ng-patter='onlyNumbers')
                 div(class='col-xs-3')
-                    a(class='btn btn-danger center-block', ng-click='getPhotos(inputId)') Search
+                    a(class='btn btn-success center-block', ng-click='getPhotos(inputId)') Search
 
             //-
                 input(type='text', ng-model='id', class='form-control', placeholder='your id')
