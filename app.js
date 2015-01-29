@@ -22,6 +22,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/gallery', gallery);
+app.use('/bootstrap1', function(req, res){
+    res.render('bootstrapView1', {});
+});
 
 // TODO recent data block
 var data = [];
