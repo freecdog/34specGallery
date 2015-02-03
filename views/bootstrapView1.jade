@@ -132,6 +132,356 @@ html(lang='en')
                 span(class='glyphicon glyphicon-search')
 
         div &nbsp;
+        div(class='text-center') ——— Headings ———
+        div &nbsp;
+
+        h1 Heading1
+        h2 Heading2
+        h3 Heading3
+        h4 Heading4
+        h5 Heading5
+        h6 Heading6
+
+        div &nbsp;
+        div(class='text-center') ——— blockquote ———
+        div &nbsp;
+
+        blockquote
+            p That this is needed, desperately needed, is indicated by the incredible uptake of Bootstrap. I use it in all the server software I'm working on. And it shows through in the templating language I'm developing, so everyone who uses it will find it's "just there" and works, any time you want to do a Bootstrap technique. Nothing to do, no libraries to include. It's as if it were part of the hardware. Same approach that Apple took with the Mac OS in 1984.
+            small Developer of RSS,
+                cite(title="Source Title")  Dave Winer
+
+        div &nbsp;
+        div(class='text-center') ——— blockquote right (in blockquote (in container)) ———
+        div &nbsp;
+
+        div(class='container-fluid')
+            blockquote
+                blockquote(class='pull-right')
+                    | Developer
+                    small of RSS,
+                        cite(title="Source Title")  Dave Winer
+                p That this is needed, desperately needed, is indicated by the incredible uptake of Bootstrap. I use it in all the server software I'm working on. And it shows through in the templating language I'm developing, so everyone who uses it will find it's "just there" and works, any time you want to do a Bootstrap technique. Nothing to do, no libraries to include. It's as if it were part of the hardware. Same approach that Apple took with the Mac OS in 1984.
+
+        div &nbsp;
+        div(class='text-center') ——— address, abbr (hint) ———
+        div &nbsp;
+
+        address
+            strong O'Reilly Media, Inc.
+            br
+            | 1005 Gravenstein HWY North
+            br
+            | Sebastopol, CA 95472
+            br
+            abbr(title="Phone") P:
+                a(href="tel:+17078277000")  (707) 827-7000
+        address
+            strong Jake Spurlock
+            br
+            a(href="mailto:flast@oreilly.com") flast@oreilly.com
+
+        div &nbsp;
+        div(class='text-center') ——— Emphasis (text-*) ———
+        div &nbsp;
+
+        p(class="muted") This content is muted
+        p(lass="text-warning") This content carries a warning class
+        p(class="text-danger") This content carries an error class
+        p(class="text-info") This content carries an info class
+        p(class="text-success") This content carries a success class
+        p This content has
+            em  emphasis
+            | , and can be
+            strong  bold
+
+        div &nbsp;
+        div(class='text-center') ——— unordered, ordered, definition lists (ul, ol, dl[dt,dd]) ———
+        div &nbsp;
+
+        ul
+            li Backpacking in Yosemite
+            li Hiking in Arches
+                ul
+                    li Delicate Arch
+                    li Park Avenue
+                    li Hiking in Arches
+                        ul
+                            li Delicate Arch
+                            li Park Avenue
+                            li Hiking in Arches
+                                ul
+                                    li Delicate Arch
+                                    li Park Avenue
+                                    li Biking the Flintstones Trail
+                            li Biking the Flintstones Trail
+                    li Biking the Flintstones Trail
+            li Biking the Flintstones Trail
+
+        ol
+            li Backpacking in Yosemite
+            li Hiking in Arches
+                ol
+                    li Delicate Arch
+                    li Park Avenue
+                    li Hiking in Arches
+                        ol
+                            li Delicate Arch
+                            li Park Avenue
+                            li Hiking in Arches
+                                ol
+                                    li Delicate Arch
+                                    li Park Avenue
+                                    li Biking the Flintstones Trail
+                            li Biking the Flintstones Trail
+                    li Biking the Flintstones Trail
+            li Biking the Flintstones Trail
+
+        dl
+            dt Backpacking in Yosemite1
+            dd Hiking in Arches2
+            dt Delicate Arch3
+            dd Park Avenue4
+
+        dl(class='dl-horizontal')
+            dt Tooo looong str: Backpacking in Yosemite1
+            dd Hiking in Arches2
+            dt Delicate Arch3
+            dd Park Avenue4
+
+        div &nbsp;
+        div(class='text-center') ——— code and pre ———
+        div &nbsp;
+
+        p Instead of always using divs, in HTML5, you can use new elements like&nbsp;
+            code &lt;section&gt;
+            | ,&nbsp;
+            code &lt;header&gt;
+            | , and&nbsp;
+            code &lt;footer&gt;
+            | . The html should look something like this:</p>
+        pre
+            | &lt;article&gt;
+            |   &lt;h1&gt;Article Heading&lt;/h1&gt;
+            | &lt;/article&gt;|
+
+        div &nbsp;
+        div(class='text-center') ——— Tables ———
+        div &nbsp;
+
+        table(class="table")
+            caption Caption: simple .table
+            thead
+                tr
+                    th THead th1
+                    th THead th2
+                    th THead th3
+            tbody
+                tr
+                    td TBody td1
+                    td TBody td2
+                    td TBody td3
+                tr
+                    td TBody td1
+                    td TBody td2
+                    td TBody td3
+                tr
+                    td TBody td1
+                    td TBody td2
+                    td TBody td3
+
+        table(class="table table-bordered")
+            caption Caption: .table + .table-bordered
+            thead
+                tr
+                    th THead th1
+                    th THead th2
+                    th THead th3
+            tbody
+                tr
+                    td TBody td1
+                    td TBody td2
+                    td TBody td3
+                tr
+                    td TBody td1
+                    td TBody td2
+                    td TBody td3
+                tr
+                    td TBody td1
+                    td TBody td2
+                    td TBody td3
+
+        table(class="table table-striped")
+            caption Caption: .table + .table-striped
+            thead
+                tr
+                    th THead th1
+                    th THead th2
+                    th THead th3
+            tbody
+                tr
+                    td TBody td1
+                    td TBody td2
+                    td TBody td3
+                tr
+                    td TBody td1
+                    td TBody td2
+                    td TBody td3
+                tr
+                    td TBody td1
+                    td TBody td2
+                    td TBody td3
+
+        table(class="table table-hover")
+            caption Caption: .table + .table-hover
+            thead
+                tr
+                    th THead th1
+                    th THead th2
+                    th THead th3
+            tbody
+                tr
+                    td TBody td1
+                    td TBody td2
+                    td TBody td3
+                tr
+                    td TBody td1
+                    td TBody td2
+                    td TBody td3
+                tr
+                    td TBody td1
+                    td TBody td2
+                    td TBody td3
+
+        table(class="table table-condensed")
+            caption Caption: .table + .table-condensed
+            thead
+                tr
+                    th THead th1
+                    th THead th2
+                    th THead th3
+            tbody
+                tr
+                    td TBody td1
+                    td TBody td2
+                    td TBody td3
+                tr
+                    td TBody td1
+                    td TBody td2
+                    td TBody td3
+                tr
+                    td TBody td1
+                    td TBody td2
+                    td TBody td3
+
+        table(class="table")
+            caption Caption: simple .table + success, danger, warning and info
+            thead
+                tr(class='success')
+                    th THead th1
+                    th THead th2
+                    th THead th3
+            tbody
+                tr(class='danger')
+                    td TBody td1
+                    td TBody td2
+                    td TBody td3
+                tr(class='warning')
+                    td TBody td1
+                    td TBody td2
+                    td TBody td3
+                tr
+                    td TBody td1
+                    td(class='info') Clear tr
+                    td TBody td3
+
+
+        div &nbsp;
+        div(class='text-center') ——— Forms (all in containers) ———
+        div &nbsp;
+
+        div(class='container')
+            form
+                fieldset
+                    legend Legend
+                    label(for="name") Label name
+                    br
+                    input(type="text", id="name", placeholder="Type something…")
+                    span(class="help-block") Example block-level help text here.
+                    label(class="checkbox", for="checkbox")
+                        input(type="checkbox", id="checkbox")
+                        | Check me out
+                    button(type="submit", class="btn") Submit
+
+        div(class='container')
+            form(class="form-group")
+                legend type "search"
+                input(type="search", class="input-sm")
+                button(type="submit", class="btn") Search
+
+        div(class='container')
+            form(class="form-horizontal")
+                legend form-horizontal
+                div(class="control-group")
+                    label(class="control-label", for="inputEmail") Email
+                    div(class="controls")
+                        input(type="text", id="inputEmail", placeholder="Email")
+                div(class="control-group")
+                    label(class="control-label", for="inputPassword") Password
+                    div(class="controls")
+                        input(type="password", id="inputPassword", placeholder="Password")
+                div(class="control-group")
+                    div(class="controls")
+                        label(class="checkbox")
+                            input(type="checkbox")
+                            | Remember me
+                        button(type="submit", class="btn") Sign in
+
+        div(class='container')
+            form
+                fieldset
+                    legend checkboxes and radio buttons
+                    label(class="checkbox")
+                        input(type="checkbox", value="")
+                        | Option one is this and that—be sure to include why it's great.
+                    label(class="radio")
+                        input(type="radio", name="optionsRadios", id="optionsRadios1", value="option1")
+                        | Option one is this and that—be sure to include why it's great.
+                    label(class="radio")
+                        input(type="radio", name="optionsRadios", id="optionsRadios2", value="option2", checked)
+                        | Option two can be something else, and selecting it will deselect option one
+
+        div(class='container')
+            form
+                fieldset
+                    legend inline checkboxes
+                    label(for="option1", class="checkbox-inline")
+                        input(type="checkbox", id="inlineCheckbox1", value="option1")
+                        | 1
+                    label(for="option2", class="checkbox-inline")
+                        input(type="checkbox", id="inlineCheckbox2", value="option2")
+                        | 2
+                    label(for="option3", class="checkbox-inline")
+                        input(type="checkbox", id="inlineCheckbox3", value="option3")
+                        | 3
+
+        div &nbsp;
+        div(class='text-center') —————————————————————————————
+        div &nbsp;
+
+        div &nbsp;
+        div(class='text-center') —————————————————————————————
+        div &nbsp;
+
+        div &nbsp;
+        div(class='text-center') —————————————————————————————
+        div &nbsp;
+
+        div &nbsp;
+        div(class='text-center') —————————————————————————————
+        div &nbsp;
+
+        div &nbsp;
         div(class='text-center') —————————————————————————————
         div &nbsp;
 
