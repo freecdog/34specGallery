@@ -16,6 +16,19 @@ html(lang='en')
         script(src='/javascripts/angBootstrap1.js')
     body(ng-app='jAppBootstrap', ng-controller='jControllerBootstrap')
 
+        div(class='container')
+            div(class='row')
+                h1
+                    span Watch these links
+                    br
+                    a(href='http://getbootstrap.com/components/') http://getbootstrap.com/components/
+                    br
+                    a(href='http://getbootstrap.com/javascript/') http://getbootstrap.com/javascript/
+                    br
+                    span And all these examples with Angular
+                    br
+                    a(href='http://angular-ui.github.io/bootstrap/') http://angular-ui.github.io/bootstrap/
+
         div &nbsp;
         div(class='text-center') ——— pyramide (same as container-fluid) ————
         div &nbsp;
@@ -103,7 +116,7 @@ html(lang='en')
         div(class='text-center') ——— !Dropdown menu ———
         div &nbsp;
 
-        div(class='container-fluid')
+        div(class='container-fluid', ng-controller='DropdownCtrl')
             div(class='btn-group')
                 button(class='btn btn-danger') Danger
                 button(class='btn btn-danger dropdown-toggle', data-toggle='dropdown', ng-click='test()')
@@ -469,13 +482,59 @@ html(lang='en')
         div(class='text-center') —————————————————————————————
         div &nbsp;
 
-        div &nbsp;
-        div(class='text-center') —————————————————————————————
-        div &nbsp;
+        div(class='container')
+            form
+                fieldset
+                    legend Selects
+                    select
+                        option 1
+                        option 2
+                        option 3
+                        option 4
+                        option 5
+                    br
+                    br
+                    select(multiple="multiple")
+                        option 1
+                        option 2
+                        option 3
+                        option 4
+                        option 5
 
         div &nbsp;
         div(class='text-center') —————————————————————————————
         div &nbsp;
+
+        div(class='container')
+            form
+                fieldset
+                    legend Extended forms controls
+                    div(class="input-prepend")
+                        span(class="add-on") @
+                        input(class="span2", id="prependedInput", type="text", placeholder="Username")
+                    div(class="input-append")
+                        input(class="span2", id="appendedInput", type="text")
+                        span(class="input-group-addon") .00
+
+        div &nbsp;
+        div(class='text-center') —————————————————————————————
+        div &nbsp;
+
+        div(class='container')
+            div(class="btn-group-xs")
+                button(type="button", class="btn btn-default dropdown-toggle", data-toggle="dropdown", aria-expanded="false") Action
+                    span(class="caret")
+                ul(class="dropdown-menu", role="menu")
+                    li
+                        a(href="#") Action
+                    li
+                        a(href="#") Another action
+                    li
+                        a(href="#") Something else here
+                    li(class="divider")
+                    li
+                        a(href="#") Separated link
+
 
         div &nbsp;
         div(class='text-center') —————————————————————————————
@@ -496,3 +555,16 @@ html(lang='en')
             div(class='row')
                 div(class='col-xs-6') Hi
                 div(class='col-xs-6') there!
+
+        div(class='container')
+            div(class='row')
+                h1
+                    span Watch these links
+                    br
+                    a(href='http://getbootstrap.com/components/') http://getbootstrap.com/components/
+                    br
+                    a(href='http://getbootstrap.com/javascript/') http://getbootstrap.com/javascript/
+                    br
+                    span And all these examples with Angular
+                    br
+                    a(href='http://angular-ui.github.io/bootstrap/') http://angular-ui.github.io/bootstrap/
